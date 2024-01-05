@@ -1,9 +1,9 @@
 #pragma once
 #include "Environment.h"
 
-class Cells : public Environment {
+class CA : public Environment {
 public:
-	Cells(int width, int height, std::shared_ptr<class Texture> texture) :
+	CA(int width, int height, std::shared_ptr<class Texture> texture) :
 		Environment{ width, height, texture } {}
 
 	bool Initialize() override;

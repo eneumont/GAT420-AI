@@ -1,8 +1,7 @@
 #include "Cells.h"
 #include "Texture.h"
 
-bool Cells::Initialize()
-{
+bool Cells::Initialize() {
 	buffer.resize(size.x * size.y);
 
 	return true;
@@ -10,8 +9,7 @@ bool Cells::Initialize()
 
 void Cells::Step() {
 	// "draw" onto buffer
-	if (mouse_button[1])
-	{
+	if (mouse_button[1]) {
 		Write<uint8_t>(buffer, mouse_position.x, mouse_position.y, 255);
 	}
 
@@ -25,4 +23,3 @@ void Cells::Step() {
 	// copy color buffer to texture
 	texture->Copy(color_buffer);
 }
-
